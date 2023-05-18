@@ -425,6 +425,18 @@ img {
 }
 
 
+@media (max-width: 767px) {
+  .work__description {
+      max-height: 100%;
+      overflow: auto;
+  }
+  
+  .work__description-line {
+      margin: 10px 0;
+  }
+}
+
+
 /* ==== Projects ====*/
 .projects-container {
   display: grid;
