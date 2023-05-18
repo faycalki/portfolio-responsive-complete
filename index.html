@@ -1,205 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online portfolio of Faycal Kilali">
+    <meta name="author" content="Your name here">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Faycal Kilali, Portfolio, Software Developer">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Portfolio website complete</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Marlon</a>
-                </div>
+    <title>Faycal Kilali's Portfolio</title>
+</head>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Marlon</span><br> Web Designer</h1>
-
-                    <a href="#" class="button">Contact</a>
-                </div>
-
-                <div class="home__social">
-                    <a href="" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/about.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Marlon</h2>
-                        <p class="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat ut voluptates soluta, aut earum nemo recusandae cumque perferendis! Recusandae alias accusamus atque.</p>           
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-html5 skills__icon'></i>
-                                <span class="skills__name">HTML5</span>
-                            </div>
-                            <div class="skills__bar skills__html">
-
-                            </div>
-                            <div>
-                                <span class="skills__percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-css3 skills__icon'></i>
-                                <span class="skills__name">CSS3</span>
-                            </div>
-                            <div class="skills__bar skills__css">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxl-javascript skills__icon' ></i>
-                                <span class="skills__name">JAVASCRIPT</span>
-                            </div>
-                            <div class="skills__bar skills__js">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">65%</span>
-                            </div>
-                        </div>
-                        <div class="skills__data">
-                            <div class="skills__names">
-                                <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UX/UI</span>
-                            </div>
-                            <div class="skills__bar skills__ux">
-                                
-                            </div>
-                            <div>
-                                <span class="skills__percentage">85%</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-            <!--===== WORK =====-->
-            <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
-
-                <div class="work__container bd-grid">
-                    <a href="" class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </a>
-                    <a href="" class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </a>
-                </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Marlon</p>
-            <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="https://www.linkedin.com/in/faycal-kilali-81940a258/" class="nav__logo" target="_blank">Faycal
+                    Kilali</a>
             </div>
-            <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
-        </footer>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Greetings,<br>I'm <span class="home__title-color">Faycal Kilali.</span><br>
+                    Computer Scientist, <br> Mathematician, <br> Software Developer.</h1>
+
+                <a href="https://docs.google.com/document/d/1An1yeoZuY7f-1qft5_Xmmxe0tIl5fEbn/edit?usp=sharing&ouid=100276904635216710727&rtpof=true&sd=true" class="button" target="_blank"> Resume</a>
+                <a href="#contact" class="button">Contact</a>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/faycal-kilali-81940a258/" class="home__social-icon"
+                    target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <!---    </1><a href="" class="home__social-icon"><i class='bx bxl-behance'></i></a>  --->
+                <a href="https://github.com/faycalki" class="home__social-icon" target="_blank"><i
+                        class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/about.jpg" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">Come get to know me!</h2>
+                    <p class="about__text">I'm currently a <b>Dual major in Computer Science & Mathematics</b>, pursuing
+                        <b>honours</b> in both. I've
+                        made several massively successful projects in the past, to name some of them: <br><b>Floris
+                            Evolved </b>
+                        for M&B
+                        as
+                        a co-founder, developer and manager with over <b>600,000 distinct viewers </b> and currently
+                        more than
+                        <b>150,000 distinct active
+                            subscribers</b> <br> <b> Medieval Conquests </b> for M&B as a Founder, Lead developer,
+                        community manager with
+                        over
+                        <b> half a million distinct viewers </b> and more than a <b>120,000 in aggregate, unique
+                            subscribers. </b>
+                        This project involved hiring over a 100 volunteers to assist with the works.
+                        <br>I'm
+                        also keen into
+                        adapting some of the propositions I've worked on into algorithms as am well aware of the
+                        intersection between Computer Science and Mathematics when it comes to maximizing efficiency.
+                        Due to my interest in Mathematics, I've proven over <b>600 mathematical propositions as
+                            exercises
+                            across textbooks before starting University</b>, further improving my ability to self learn
+                        challenging concepts.
+                        <br> I strive towards excellence through taking on new challenges rather than staying within my
+                        circle of comfort, for the best way to learn is to expose yourself to new experiences.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Profesional Skills</h2>
+                    <p class="skills__text">I have a heavy interest in creating efficient works, proving propositions
+                        deductively, and improving upon my skills in whichever way possible.
+                    </p>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Formal Logic</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Java</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Python</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">MBScript</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
 
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Git</span>
+                        </div>
+                        <div class="skills__bar skills__general">
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Linux</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Embedded Systems Design & Implementation</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class='bx bxs-paint skills__icon'></i>
+                            <span class="skills__name">Data & Statistical Analysis (ML)</span>
+                        </div>
+                        <div class="skills__bar skills__general">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage"></span>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div>
+                    <img src="assets/img/skillpic.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+        
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Work</h2>
+
+            <div class="work__container bd-grid">
+                <div class="work__item">
+                    <img src="assets/img/work1.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - Present <br> Technical Lead for the Dorchester Moving
+                            Forward
+                            Co-Operative organization. </p>
+                    </div>
+                </div>
+                <div class="work__item">
+                    <img src="assets/img/work2.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - Present <br> Tutor on payroll for Mount Allison University
+                        </p>
+                    </div>
+                </div>
+                <div class="work__item">
+                    <img src="assets/img/roai.png" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - Present <br> Founder & President of the Robotics & AI
+                            Society in
+                            Mount Allison University.</p>
+                    </div>
+                </div>
+
+                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - Present <br> Vice Preisdent of the Mature Student Club in
+                            Mount Allison University.</p>
+                    </div>
+                </div>
+                <!-- add more work items as needed -->
+            </div>
+        </section>
+
+
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-container">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/mc.png" alt="Medieval Conquests">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Medieval Conquests</h3>
+                            <p class="project-description">Medieval Conquests is a Medieval Ages complete overhaul
+                                for the Mount &amp; Blade: Warband, this modification takes you back to the 13th
+                                century
+                                with a fresh new campaign and an improved networking code re-structure for viable
+                                co-operative gaming.
+
+                                From this point on the player and the computer lords shape the land and fight for
+                                supremacy and control of the continent in a political landscape full of intrigue and
+                                supremacy.</p>
+
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=770266833&searchtext=medieval+conquest"
+                            target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/medieval-conquests" target="_blank"><img
+                                src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/medieval-conquests" target="_blank"><img
+                                src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6128" target="_blank"><img
+                                src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/project2.jpg" alt="Floris Evolved">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Floris Evolved</h3>
+                            <p class="project-description">As co-founder and developer of Floris Evolved, a major
+                                overhaul for the game "Mount & Blade: Warband," I played a critical role in transforming
+                                the original game into a new and exciting experience. With 160,000+ active unique
+                                subscribers on Steam and 600,000 distinct visitors and overwhelmingly positive ratings,
+                                the project was a resounding success.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=582428582" target="_blank"><img
+                                src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+
+                        <a href="https://www.moddb.com/mods/floris-evolved" target="_blank"><img
+                                src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6019/" target="_blank"><img
+                                src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/tp.jpg" alt="Tainted Paths">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Tainted Paths</h3>
+                            <p class="project-description">Tainted Paths is a full game modification of Mount & Blade:
+                                Warband written with over 100000 lines of custom code, custom assets as well as a vision
+                                for a more fun and intense experience, it attempts to provide you with a fun and unique
+                                large scale experience as well as a captivating story that is shaped by you, the player.
+                                From swords and chainmails to muskets and plate armours you will be able to fight and
+                                conquer in multiple time periods and across multiple continents.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/tainted-paths" target="_blank"><img
+                                src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/tainted-paths" target="_blank"><img
+                                src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/tainted-paths" target="_blank"><img
+                                src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6206/" target="_blank"><img
+                                src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/EAHI.png" alt="EAHI">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Expanded Avatar Hand Interactions (EAHI)</h3>
+                            <p class="project-description">EAHI stands for Expanded Avatar Hand Interactions. EA is a
+                                framework established by Faycal Kilali with the goal of expanding the functionality of
+                                avatars within Virtual Reality software.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/EAHI" target="_blank"><img src="assets/img/github-mark.png"
+                                alt="GitHub"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <style>
+
+        </style>
+
+
+
+        <!--===== CONTACT =====-->
+        <!--=== old
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="mail" placeholder="Email" class="contact__input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="button" value="Enviar" class="contact__button button">
+                </form>
+            </div>
+        </section>
+    ===-->
+
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact__text">To get in touch, please email me at <a
+                    href="mailto:root@faycalkilali.com">root@faycalkilali.com</a>.</p>
+        </section>
+
+
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Faycal Kilali</p>
+        <div class="footer__social">
+            <!--    <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a> 
+    -->
+            <a href="https://www.linkedin.com/in/faycal-kilali-81940a258/" target=" _blank" class="footer__icon"><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/faycalki" target=" _blank" class="footer__icon"><i
+                    class='bx bxl-github'></i></a>
+        </div>
+        <p class="footer__copy">&#169; Faycal Kilali. All rights reserved.</p>
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
