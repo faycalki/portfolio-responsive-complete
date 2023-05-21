@@ -10,6 +10,30 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Faycal Kilali, Portfolio, Software Developer">
     <link rel="stylesheet" href="assets/css/styles.css">
 
+
+<!--- ===== Mobile users detection =====-->
+<script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+
+<script type='text/javascript'>
+  if (WURFL.is_mobile === true) {
+    window.location.replace("http://faycalkilali.com/mobile");
+  }
+</script>
+
+
+<script type="text/javascript">
+    // Function to detect if the user is using a mobile device
+    function isMobileDevice() {
+      return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+  
+    // Redirect mobile users to the desired URL
+    if (isMobileDevice()) {
+      window.location.href = "http://faycalkilali.com/mobile";
+    }
+  </script>  
+  
+
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
