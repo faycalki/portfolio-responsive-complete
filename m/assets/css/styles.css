@@ -18,10 +18,10 @@
   --text-color: #ffffff;
   --title-color: #1d7efe;
 
-  --first-color: #1f242dff; /* Background color */
-  --second-color: #ffffffff; /* Text color */
-  --third-color: hsl(141.18, 100%, 40%); /* Title color */
-  
+  --first-color: hsl(147, 8%, 42%); /* Background color */
+  --second-color: #1f242dff; /* Text color */
+  --third-color: hsl(147, 8%, 42%); /* Title color */
+
   /*===== Fonts and typography =====*/
   --body-font: 'Poppins',
     sans-serif;
@@ -63,7 +63,7 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--first-color);
+  color: var(--second-color);
 }
 
 h1,
@@ -129,7 +129,7 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #1f242dff;
+  background-color: #fff;
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
@@ -150,7 +150,7 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--first-color);
+    background-color: var(--second-color);
     transition: .5s;
   }
 }
@@ -657,18 +657,6 @@ img {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
-}
-
-.work__description {
-  text-align: center;
-}
-
-.work__duration {
-  font-weight: bold;
-}
-
-.work__role {
-  font-style: italic;
 }
 
 @media screen and (min-width: 992px) {
