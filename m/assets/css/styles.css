@@ -9,16 +9,13 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
 
 
+
   /* HSL color mode */
-
-  /* Colors */
-  --hue-color: 220
-  --text-color: hsl(147, 8%, 42%)
-  --title-color: #1f242dff;
-
-  --first-color: #1f242dff; /* Background color */
-  --second-color: #1f242dff; /* Text color */
-  --third-color: hsl(147, 8%, 42%); /* Title color */
+  --hue-color: 220;
+  --first-color: hsl(var(--hue-color), 0%, 40%);
+  /* 89%, 60% */
+  --second-color: hsl(var(--hue-color), 0%, 15%);
+  /* 56%, 12% */
 
   /*===== Fonts and typography =====*/
   --body-font: 'Poppins',
