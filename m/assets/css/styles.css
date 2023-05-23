@@ -11,14 +11,12 @@
 
   /* HSL color mode */
 
-  --header-height: 3rem;
-  --font-semi: 600;
   /* Colors */
-  --hue-color: #1f242dff
+  --hue-color: 220
   --text-color: hsl(147, 8%, 42%)
-  --title-color: #1d7efe;
+  --title-color: #1f242dff;
 
-  --first-color: hsl(147, 8%, 42%); /* Background color */
+  --first-color: #1f242dff; /* Background color */
   --second-color: #1f242dff; /* Text color */
   --third-color: hsl(147, 8%, 42%); /* Title color */
 
