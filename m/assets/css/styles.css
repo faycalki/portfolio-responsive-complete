@@ -9,13 +9,18 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
 
 
-
   /* HSL color mode */
-  --hue-color: 220;
-  --first-color: hsl(var(--hue-color), 0%, 40%);
-  /* 89%, 60% */
-  --second-color: hsl(var(--hue-color), 0%, 15%);
-  /* 56%, 12% */
+
+  --header-height: 3rem;
+  --font-semi: 600;
+  /* Colors */
+  --hue-color: #1f242dff
+  --text-color: hsl(147, 8%, 42%)
+  --title-color: #1d7efe;
+
+  --first-color: hsl(147, 8%, 42%); /* Background color */
+  --second-color: #1f242dff; /* Text color */
+  --third-color: hsl(147, 8%, 42%); /* Title color */
 
   /*===== Fonts and typography =====*/
   --body-font: 'Poppins',
@@ -87,7 +92,7 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--third-color);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
@@ -421,7 +426,7 @@ img {
 .project-overlay {
   position: relative;
   max-width: 400px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -484,8 +489,8 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
-  color: #fff;
+  background-color: var(--first-color);
+  color: var(--second-color);
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
