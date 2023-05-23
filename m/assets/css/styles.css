@@ -14,8 +14,8 @@
   --header-height: 3rem;
   --font-semi: 600;
   /* Colors */
-  --hue-color: hsl(141.18, 100%, 40%);
-  --text-color: #ffffff;
+  --hue-color: #1f242dff
+  --text-color: hsl(147, 8%, 42%)
   --title-color: #1d7efe;
 
   --first-color: hsl(147, 8%, 42%); /* Background color */
