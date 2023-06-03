@@ -11,14 +11,20 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
 
-    <!--- ===== Mobile users detection =====-->
-    <script type='text/javascript' src="//wurfl.io/wurfl.js">
-    
+<!-- ===== Mobile user detection ===== -->
+<script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+<script type='text/javascript'>
+  WURFL.onReady(function() {
     if (WURFL.is_mobile === true) {
-        window.location.replace("http://www.faycalkilali.com/m/");
+      window.location.replace("http://www.faycalkilali.com/m/");
     }
-    
+  });
 </script>
+
+
+
+
+
 
     <!-- =====BOX ICONS===== -->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
