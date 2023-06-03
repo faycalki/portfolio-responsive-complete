@@ -10,17 +10,11 @@
 
 
   /* HSL color mode */
-
-  --header-height: 3rem;
-  --font-semi: 600;
-  /* Colors */
-  --hue-color: #1f242dff
-  --text-color: hsl(147, 8%, 42%)
-  --title-color: #1d7efe;
-
-  --first-color: hsl(147, 8%, 42%); /* Background color */
-  --second-color: #1f242dff; /* Text color */
-  --third-color: hsl(147, 8%, 42%); /* Title color */
+  --hue-color: 220;
+  --first-color: hsl(var(--hue-color), 0%, 40%);
+  /* 89%, 60% */
+  --second-color: hsl(var(--hue-color), 0%, 15%);
+  /* 56%, 12% */
 
   /*===== Fonts and typography =====*/
   --body-font: 'Poppins',
@@ -92,7 +86,7 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--third-color);
+  color: var(--first-color);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
   text-align: center;
@@ -376,17 +370,59 @@ img {
   border-radius: .5rem;
 }
 
-/* ===== WORK =====*/
-
-
-/* Styles for mobile users */
-@media (max-width: 767px) {
-  .work__overlay {
-    opacity: 1;
-    transition: none;
-  }
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
 }
 
+.work__item {
+  position: relative;
+}
+
+.work__img {
+  width: 100%;
+  height: auto;
+}
+
+.work__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.work__item:hover .work__overlay {
+  opacity: 1;
+}
+
+.work__description {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  overflow: auto;
+}
+
+.work__duration {
+  display: block;
+  font-weight: bold;
+}
+
+.work__role {
+  display: block;
+}
 
 
 /* ==== Projects ====*/
@@ -414,15 +450,17 @@ img {
   transition: transform 0.3s ease-in-out;
 }
 
-.project-image:hover img {
-  transform: scale(1.05);
+/* Remove the hover effect for mobile devices */
+@media (hover: none) {
+  .project-image img {
+    transform: none;
+  }
+
+  .project-item .project-overlay {
+    opacity: 1;
+  }
 }
 
-.project-item:hover .project-overlay {
-  opacity: 1;
-}
-
-/* CSS */
 .project-overlay {
   position: relative;
   max-width: 400px;
@@ -489,8 +527,8 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--first-color);
-  color: var(--second-color);
+  background-color: var(--second-color);
+  color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -560,11 +598,7 @@ img {
     column-gap: 1rem;
   }
 
-  .work__container {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-    padding-top: 2rem;
-  }
+
 
   .contact__form {
     width: 360px;
@@ -584,6 +618,11 @@ img {
     font-size: 1.2rem;
     line-height: 1.5;
     margin: 0;
+  }
+
+  .work__item {
+    max-width: none;
+    width: 100%;
   }
 
 }
@@ -653,10 +692,7 @@ img {
     text-align: initial;
   }
 
-  .work__container {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
-  }
+
 }
 
 @media screen and (min-width: 992px) {
