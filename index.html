@@ -12,14 +12,13 @@
 
 
 <!-- ===== Mobile user detection ===== -->
-<script type='text/javascript' src="//wurfl.io/wurfl.js"></script>
+<script src="//wurfl.io/wurfl.js" crossorigin></script>
 <script type='text/javascript'>
-  WURFL.onReady(function() {
-    if (WURFL.is_mobile === true) {
-      window.location.replace("http://www.faycalkilali.com/m/");
-    }
-  });
+  if (WURFL.is_mobile) {
+    window.location.href = "https://www.faycalkilali.com/m/";
+  }
 </script>
+
 
 
 
