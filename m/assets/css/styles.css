@@ -1,6 +1,17 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+/* Define the color for the specific words */
+.home__title-color {
+  color: #ff0000;
+  /* Replace with your desired color code for the name */
+}
+
+.profession {
+  color: #000080;
+  /* Replace with your desired color code for the professions */
+}
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -478,7 +489,8 @@ img {
 
 .project-title {
   color: #fff;
-  font-size: 1rem; /* Initial font size */
+  font-size: 1rem;
+  /* Initial font size */
   font-weight: bold;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -486,7 +498,8 @@ img {
 
 .project-description {
   color: #fff;
-  font-size: 1rem; /* Initial font size */
+  font-size: 1rem;
+  /* Initial font size */
   text-align: center;
   padding: 0 1rem;
 }

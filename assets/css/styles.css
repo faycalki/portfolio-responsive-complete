@@ -1,6 +1,18 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+/* Define the color for the specific words */
+.home__title-color {
+  color: #ff0000;
+  /* Replace with your desired color code for the name */
+}
+
+.profession {
+  color: #000080;
+  /* Replace with your desired color code for the professions */
+}
+
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -62,7 +74,8 @@ body {
 
 @media screen and (max-width: 767px) {
   body {
-    color: #fff; /* Change to white */
+    color: #fff;
+    /* Change to white */
   }
 }
 
@@ -462,7 +475,8 @@ img {
 
 @media screen and (max-width: 767px) {
   .projects-container {
-    grid-template-columns: 1fr; /* Change to one column */
+    grid-template-columns: 1fr;
+    /* Change to one column */
   }
 
   .project-overlay {
@@ -480,7 +494,8 @@ img {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
-  margin-top: 0.5rem; /* Changed from margin-bottom to margin-top */
+  margin-top: 0.5rem;
+  /* Changed from margin-bottom to margin-top */
 }
 
 .project-description {
