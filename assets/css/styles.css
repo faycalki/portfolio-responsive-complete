@@ -72,12 +72,7 @@ body {
   color: var(--second-color);
 }
 
-@media screen and (max-width: 767px) {
-  body {
-    color: #fff;
-    /* Change to white */
-  }
-}
+
 
 h1,
 h2,
