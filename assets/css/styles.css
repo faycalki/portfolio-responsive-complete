@@ -435,7 +435,13 @@ img {
     overflow-wrap: break-word;
 }
 
-
+/* ===== WORK ===== */
+.work__img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;  /* crops image to fill without stretching */
+    display: block;
+}
 
 
 
