@@ -23,59 +23,88 @@
         return '★'.repeat(full) + '☆'.repeat(5 - full);
     }
 
-    function renderStats(data) {
+    // Safely merges live data over fallback so every field always has a value,
+    // even if the live fetch only partially succeeded.
+    function withFallback(key, liveData) {
+        const base = FALLBACK[key];
+        if (!liveData) return { ...base };
+        return {
+            subs: liveData.subs != null ? liveData.subs : base.subs,
+            lifetimeSubs: liveData.lifetimeSubs != null ? liveData.lifetimeSubs : base.lifetimeSubs,
+            views: liveData.views != null ? liveData.views : base.views,
+            favs: liveData.favs != null ? liveData.favs : base.favs,
+            stars: liveData.stars != null ? liveData.stars : base.stars,
+            numRatings: liveData.numRatings != null ? liveData.numRatings : base.numRatings
+        };
+    }
+
+    function renderStats(rawData) {
+        // Build a complete, safe dataset before rendering anything, so a
+        // missing/malformed entry for one project can never break the others.
+        const data = {};
+        STEAM_PROJECTS.forEach(p => {
+            data[p.key] = withFallback(p.key, rawData[p.key]);
+        });
+
         STEAM_PROJECTS.forEach(p => {
             const d = data[p.key];
-            if (!d) return;
-            const subsEl = document.getElementById(`stat-${p.key}-subs`);
-            const lifeEl = document.getElementById(`stat-${p.key}-lifetime`);
-            const viewsEl = document.getElementById(`stat-${p.key}-views`);
-            const favsEl = document.getElementById(`stat-${p.key}-favs`);
-            const ratingEl = document.getElementById(`rating-${p.key}`);
-            if (subsEl) subsEl.textContent = d.subs.toLocaleString();
-            if (lifeEl) lifeEl.textContent = d.lifetimeSubs.toLocaleString();
-            if (viewsEl) viewsEl.textContent = d.views.toLocaleString();
-            if (favsEl) favsEl.textContent = d.favs.toLocaleString();
-
-            // Always guarantee a rating value is shown, falling back to cached data
-            // if live scrape returned incomplete/null fields.
-            const stars = (d.stars != null) ? d.stars : FALLBACK[p.key].stars;
-            const numRatings = (d.numRatings != null) ? d.numRatings : FALLBACK[p.key].numRatings;
-            if (ratingEl) {
-                ratingEl.textContent = `${starGlyphs(stars)} (${numRatings.toLocaleString()} ratings)`;
+            try {
+                const subsEl = document.getElementById(`stat-${p.key}-subs`);
+                const lifeEl = document.getElementById(`stat-${p.key}-lifetime`);
+                const viewsEl = document.getElementById(`stat-${p.key}-views`);
+                const favsEl = document.getElementById(`stat-${p.key}-favs`);
+                const ratingEl = document.getElementById(`rating-${p.key}`);
+                if (subsEl) subsEl.textContent = d.subs.toLocaleString();
+                if (lifeEl) lifeEl.textContent = d.lifetimeSubs.toLocaleString();
+                if (viewsEl) viewsEl.textContent = d.views.toLocaleString();
+                if (favsEl) favsEl.textContent = d.favs.toLocaleString();
+                if (ratingEl) {
+                    ratingEl.textContent = `${starGlyphs(d.stars)} (${d.numRatings.toLocaleString()} ratings)`;
+                }
+            } catch (err) {
+                console.warn(`Render failed for ${p.key}:`, err);
             }
         });
+
         renderBars(data);
         renderHeroStrip(data);
     }
 
     function renderBars(data) {
-        const maxViews = Math.max(...STEAM_PROJECTS.map(p => data[p.key].views));
-        STEAM_PROJECTS.forEach(p => {
-            const d = data[p.key];
-            ['subs', 'lifetimeSubs', 'views'].forEach((metric) => {
-                const bar = document.getElementById(`bar-${p.key}-${metric}`);
-                if (bar) {
-                    const pct = Math.max(4, (d[metric] / maxViews) * 100);
-                    requestAnimationFrame(() => { bar.style.width = pct + '%'; });
-                }
+        try {
+            const maxViews = Math.max(...STEAM_PROJECTS.map(p => data[p.key].views));
+            STEAM_PROJECTS.forEach(p => {
+                const d = data[p.key];
+                ['subs', 'lifetimeSubs', 'views'].forEach((metric) => {
+                    const bar = document.getElementById(`bar-${p.key}-${metric}`);
+                    if (bar) {
+                        const pct = Math.max(4, (d[metric] / maxViews) * 100);
+                        requestAnimationFrame(() => { bar.style.width = pct + '%'; });
+                    }
+                });
             });
-        });
+        } catch (err) {
+            console.warn("renderBars failed:", err);
+        }
     }
 
     function renderHeroStrip(data) {
-        const values = Object.values(data);
-        const totalLifetime = values.reduce((sum, d) => sum + (d.lifetimeSubs || 0), 0);
-        const totalViews = values.reduce((sum, d) => sum + (d.views || 0), 0);
-        const totalProjects = values.length;
+        try {
+            const values = Object.values(data);
+            const totalLifetime = values.reduce((sum, d) => sum + (d.lifetimeSubs || 0), 0);
+            const totalViews = values.reduce((sum, d) => sum + (d.views || 0), 0);
+            const totalProjects = values.length;
 
-        const lifetimeEl = document.getElementById('hero-stat-lifetime');
-        const viewsEl = document.getElementById('hero-stat-views');
-        const projectsEl = document.getElementById('hero-stat-projects');
+            const lifetimeEl = document.getElementById('hero-stat-lifetime');
+            const viewsEl = document.getElementById('hero-stat-views');
+            const projectsEl = document.getElementById('hero-stat-projects');
 
-        if (lifetimeEl) lifetimeEl.textContent = formatCompact(totalLifetime);
-        if (viewsEl) viewsEl.textContent = formatCompact(totalViews);
-        if (projectsEl) projectsEl.textContent = totalProjects.toString();
+            if (lifetimeEl) lifetimeEl.textContent = formatCompact(totalLifetime);
+            if (viewsEl) viewsEl.textContent = formatCompact(totalViews);
+            if (projectsEl) projectsEl.textContent = totalProjects.toString();
+        } catch (err) {
+            console.warn("renderHeroStrip failed:", err);
+        }
     }
 
     function showLiveBadge(isLive) {
@@ -108,13 +137,18 @@
 
         const parsed = {};
         details.forEach(item => {
-            const proj = STEAM_PROJECTS.find(p => p.id === item.publishedfileid);
+            // Compare as strings — Steam's API can return publishedfileid as
+            // either a string or a number depending on the item, and a strict
+            // === comparison against our string IDs would otherwise silently
+            // fail to match, leaving that project undefined downstream.
+            const itemId = String(item.publishedfileid);
+            const proj = STEAM_PROJECTS.find(p => p.id === itemId);
             if (!proj) return;
             parsed[proj.key] = {
-                subs: Math.round(Number(item.subscriptions)),
-                lifetimeSubs: Math.round(Number(item.lifetime_subscriptions)),
-                views: Math.round(Number(item.views)),
-                favs: Math.round(Number(item.lifetime_favorited))
+                subs: Math.round(Number(item.subscriptions)) || 0,
+                lifetimeSubs: Math.round(Number(item.lifetime_subscriptions)) || 0,
+                views: Math.round(Number(item.views)) || 0,
+                favs: Math.round(Number(item.lifetime_favorited)) || 0
             };
         });
         return parsed;
@@ -133,8 +167,6 @@
             const starMatch = text.match(/\/(\d)(?:_half)?-star_large\.png/);
             const numMatch = text.match(/numRatings">([\d,]+) ratings/);
 
-            // If either field failed to parse, treat the whole result as invalid
-            // so the caller falls back to cached data instead of showing blanks.
             if (!starMatch || !numMatch) {
                 console.warn(`Rating parse incomplete for ${project.key}, using cached value.`);
                 return null;
@@ -151,28 +183,36 @@
     }
 
     async function fetchSteamStats() {
+        let coreStats = {};
+        let coreSucceeded = false;
+
         try {
-            const coreStats = await fetchCoreStats();
-
-            const ratingResults = await Promise.all(STEAM_PROJECTS.map(fetchRating));
-            STEAM_PROJECTS.forEach((p, i) => {
-                const rating = ratingResults[i];
-                if (coreStats[p.key] && rating && rating.stars != null && rating.numRatings != null) {
-                    coreStats[p.key].stars = rating.stars;
-                    coreStats[p.key].numRatings = rating.numRatings;
-                } else if (coreStats[p.key]) {
-                    coreStats[p.key].stars = FALLBACK[p.key].stars;
-                    coreStats[p.key].numRatings = FALLBACK[p.key].numRatings;
-                }
-            });
-
-            renderStats(coreStats);
-            showLiveBadge(true);
+            coreStats = await fetchCoreStats();
+            coreSucceeded = true;
         } catch (err) {
-            console.warn("Live Steam stats fetch failed, using cached fallback:", err);
-            renderStats(FALLBACK);
-            showLiveBadge(false);
+            console.warn("Core stats fetch failed, using cached fallback:", err);
         }
+
+        // Ratings are fetched independently — even if this fails entirely,
+        // it must never block the core subscriber/view stats from rendering.
+        let ratingResults = STEAM_PROJECTS.map(() => null);
+        try {
+            ratingResults = await Promise.all(STEAM_PROJECTS.map(fetchRating));
+        } catch (err) {
+            console.warn("Rating fetch batch failed:", err);
+        }
+
+        STEAM_PROJECTS.forEach((p, i) => {
+            const rating = ratingResults[i];
+            if (!coreStats[p.key]) coreStats[p.key] = {};
+            if (rating && rating.stars != null && rating.numRatings != null) {
+                coreStats[p.key].stars = rating.stars;
+                coreStats[p.key].numRatings = rating.numRatings;
+            }
+        });
+
+        renderStats(coreStats);
+        showLiveBadge(coreSucceeded);
     }
 
     document.addEventListener("DOMContentLoaded", fetchSteamStats);
