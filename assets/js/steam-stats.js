@@ -16,27 +16,36 @@
         return '★'.repeat(full) + '☆'.repeat(5 - full);
     }
 
-    function renderStats(data) {
-        Object.keys(FALLBACK).forEach(key => {
-            const d = data[key] || FALLBACK[key];
-            try {
-                const subsEl = document.getElementById(`stat-${key}-subs`);
-                const lifeEl = document.getElementById(`stat-${key}-lifetime`);
-                const viewsEl = document.getElementById(`stat-${key}-views`);
-                const favsEl = document.getElementById(`stat-${key}-favs`);
-                const ratingEl = document.getElementById(`rating-${key}`);
-                if (subsEl) subsEl.textContent = d.subs.toLocaleString();
-                if (lifeEl) lifeEl.textContent = d.lifetimeSubs.toLocaleString();
-                if (viewsEl) viewsEl.textContent = d.views.toLocaleString();
-                if (favsEl) favsEl.textContent = d.favs.toLocaleString();
-                if (ratingEl) ratingEl.textContent = `${starGlyphs(d.stars)} (${d.numRatings.toLocaleString()} ratings)`;
-            } catch (err) {
-                console.warn(`Render failed for ${key}:`, err);
-            }
-        });
-        renderBars(data);
-        renderHeroStrip(data);
-    }
+function renderStats(data) {
+    Object.keys(FALLBACK).forEach(key => {
+        const raw = data[key] || {};
+        const fb = FALLBACK[key];
+        const d = {
+            subs: raw.subs != null ? raw.subs : fb.subs,
+            lifetimeSubs: raw.lifetimeSubs != null ? raw.lifetimeSubs : fb.lifetimeSubs,
+            views: raw.views != null ? raw.views : fb.views,
+            favs: raw.favs != null ? raw.favs : fb.favs,
+            stars: raw.stars != null ? raw.stars : fb.stars,
+            numRatings: raw.numRatings != null ? raw.numRatings : fb.numRatings
+        };
+        try {
+            const subsEl = document.getElementById(`stat-${key}-subs`);
+            const lifeEl = document.getElementById(`stat-${key}-lifetime`);
+            const viewsEl = document.getElementById(`stat-${key}-views`);
+            const favsEl = document.getElementById(`stat-${key}-favs`);
+            const ratingEl = document.getElementById(`rating-${key}`);
+            if (subsEl) subsEl.textContent = d.subs.toLocaleString();
+            if (lifeEl) lifeEl.textContent = d.lifetimeSubs.toLocaleString();
+            if (viewsEl) viewsEl.textContent = d.views.toLocaleString();
+            if (favsEl) favsEl.textContent = d.favs.toLocaleString();
+            if (ratingEl) ratingEl.textContent = `${starGlyphs(d.stars)} (${d.numRatings.toLocaleString()} ratings)`;
+        } catch (err) {
+            console.warn(`Render failed for ${key}:`, err);
+        }
+    });
+    renderBars(data);
+    renderHeroStrip(data);
+}
 
     function renderBars(data) {
         try {
