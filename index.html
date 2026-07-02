@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Online portfolio of Faycal Kilali">
+    <meta name="author" content="Faycal Kilali">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Faycal Kilali, Portfolio, Software Developer,
+Computer Scientist, Mathematician, Machine Learning, Artificial Intelligence, Deep Learning,
+AI Developer, ML Developer, AI Specialist, ML Specialist, MILA, Quebec AI Institute, Université de Montréal, University of Montreal, UdeM, Reinforcement Learning,
+Natural Language Processing, Computer Vision, Data Scientist, Yoshua Bengio, Gilles Brassard">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Faycal Kilali's Portfolio</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="https://www.linkedin.com/in/faycal-kilali-81940a258/" class="nav__logo" target="_blank">Faycal Kilali</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#selected-projects" class="nav__link">Selected Projects</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#awards" class="nav__link">Awards</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Greetings,<br>I'm <span class="home__title-color">Faycal Kilali.</span><br>
+                    <span class="profession">Computer Scientist,</span> <br>
+                    <span class="profession">AI/ML Developer,</span> <br>
+                    <span class="profession">Mathematician,</span> <br>
+                    <span class="profession">Software Developer,</span> <br>
+                    <span class="profession">Data Scientist</span>
+                </h1>
+
+                <a href="https://faycalki.github.io/portfolio-responsive-complete/faycal_kilali_resume_2pager.pdf"
+                    class="button" target="_blank">Resume</a>
+                <a href="#contact" class="button">Contact</a>
+            </div>
+
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/faycal-kilali-81940a258/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/faycalki" class="home__social-icon" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section" id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/about.jpg" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">Come get to know me!</h2>
+<p class="about__text">
+    I'm based in Montreal, Canada, and am currently pursuing an 
+    <b>M.Sc. in Computer Science at Université de Montréal</b> 
+    (ranked <b>#3 for AI Research in Canada &amp; #9 worldwide</b>, 2025 Shanghai Ranking; 
+    <b>#3 in CS in Canada &amp; #52 worldwide</b>, 2026 Times Higher Education), 
+    admitted from a competitive applicant pool with the Department of Computer Science and Operations Research awarding only 
+    <b>~50 graduate degrees per year</b>. I receive direct instruction from 
+    <b>MILA (Quebec AI Institute)</b>-affiliated UdeM &amp; McGill faculty — one of the world's 
+    largest academic AI research centres, founded by Turing Award laureate <b>Yoshua Bengio</b>. 
+    UdeM is also home to <b>Gilles Brassard</b>, recipient of the 2025 Turing Award for 
+    co-founding quantum cryptography, making it one of very few universities in the world with 
+    <b>two Turing Award laureates</b> among its faculty.
+    <br><br>
+    I've also acquired a <b>B.Sc. (Honours) in Computer Science &amp; Mathematics</b> at 
+    Mount Allison University whilst leading the <b>AI &amp; Robotics Society as Founder 
+    and President for three years</b>, and co-founding the Mature Students Club as Vice 
+    President. I hold certifications in <b>Machine Learning with Python</b> (IBM), 
+    <b>Object Oriented Design</b> (UAlberta), and <b>Microsoft Learn AI Skills</b> 
+    (Microsoft Corporation).
+    <br><br>
+    I've built several massively successful projects in the past. To name some: 
+    <b>Floris Evolved</b> for M&amp;B as a co-founder, developer and manager with over 
+    <b>600,000 distinct viewers</b> and more than <b>150,000 distinct</b> active 
+    subscribers. <b>Medieval Conquests</b> for M&amp;B as Founder and Lead Developer, 
+    with over <b>half a million distinct viewers</b> and more than <b>120,000 unique 
+    subscribers</b>. In total, my open-source game modifications have accumulated 
+    <b>314,000+ active subscribers</b> and <b>1.3+ million unique visitors</b> across 
+    platforms with 90–95% positive ratings.
+    <br><br>
+    I'm also keen on adapting mathematical propositions into algorithms, well aware of 
+    the intersection between Computer Science and Mathematics when it comes to maximizing 
+    efficiency. I've proven over <b>600 mathematical propositions as exercises across 
+    textbooks before starting University</b>, further improving my ability to self-learn 
+    challenging concepts.
+    <br><br>
+    I strive towards excellence through taking on new challenges rather than staying 
+    within my circle of comfort, for the best way to learn is to expose yourself to 
+    new experiences.
+</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== EDUCATION =====-->
+        <section class="education section" id="education">
+            <h2 class="section-title">Education</h2>
+
+            <div class="education__container bd-grid">
+                <div class="education__item">
+                    <h3 class="education__degree"><b>M.Sc. Computer Science (with Internship)</b></h3>
+                    <p class="education__school">Université de Montréal — Montreal, QC &nbsp; <span class="education__date">2026 – 2028</span></p>
+                    <ul class="education__details">
+<li>Ranked <b>#3 for AI Research in Canada &amp; #9 worldwide for AI research</b> (2025 Shanghai Ranking); <b>#3 in Computer Science in Canada &amp; #52 worldwide in CS</b> (2026 Times Higher Education); home to <b>two Turing Award laureates</b> &mdash; Yoshua Bengio (deep learning) &amp; Gilles Brassard (quantum cryptography, 2025 Turing Award).</li>
+
+<li>Graduate program with direct instruction from <b>MILA (Quebec AI Institute)</b>-affiliated
+UdeM &amp; McGill faculty &mdash; <em>one of the world's largest academic AI research &amp;
+teaching centres, founded by Yoshua Bengio</em> &mdash; spanning deep learning, representation
+learning, self-supervised &amp; meta-learning, reinforcement learning, generative models (GANs,
+GFlowNets, diffusion models), NLP &amp; LLMs, computer vision, probabilistic inference,
+optimization, graph &amp; geometric deep learning, and AI applications in science &amp; robotics.</li>
+
+<li>Admitted from a competitive applicant pool for CS, with the department awarding only about <b>~50 graduate degrees per year in Computer Science</b>.</li>
+                    </ul>
+                </div>
+
+                <div class="education__item">
+                    <h3 class="education__degree"><b>B.Sc. (Honours) Computer Science and Mathematics</b></h3>
+                    <p class="education__school">Mount Allison University — Sackville, NB &nbsp; <span class="education__date">2022 – 2026</span></p>
+                    <ul class="education__details">
+                        <li><b>Certifications:</b> <em>Machine Learning with Python</em> (IBM), <em>Object Oriented Design</em> (UAlberta), <em>Microsoft Learn AI Skills</em> (Microsoft Corporation)</li>
+                        <li><b>Founder and President</b> of the AI &amp; Robotics Society (2023–2026) — organized an exclusive screening of <em>The Thinking Game</em> (produced in partnership with Google DeepMind) after being directly contacted by their impact team</li>
+                        <li><b>Co-Founder and Vice President</b> of the Mature Students Club (2023–2025)</li>
+                    </ul>
+                </div>
+
+                <div class="education__item">
+                    <h3 class="education__degree"><b>Relevant Coursework</b></h3>
+                    <p><b>Mathematical:</b> Vector Calculus, Multivariable Calculus, Calculus 2, Applied Calculus, Advanced Linear Algebra, Linear Algebra, Mathematical Modeling, Probability and Statistics, Discrete Structures, Real Analysis, Mathematical Optimization, Modern Algebra, Differential Equations, General Physics I &amp; II.</p>
+                    <p><b>Computer Science:</b> Software Design, Operating Systems, Advanced Data Structures &amp; Algorithms, Database Systems, Computer Networks, Graph Theory, Algorithm Analysis, Systems Programming, Digital Electronics and Digital Signal Processing, Artificial Intelligence, Simulation and Modeling, Computer Organization &amp; Architecture, Object-Oriented Design, Introduction to Data Science.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Professional Skills</h2>
+                    <p class="skills__text">I have a heavy interest in creating efficient works, proving propositions
+                        deductively, and improving upon my skills in whichever way possible.
+                    </p>
+
+                    <!-- Programming Languages -->
+                    <h3 class="skills__category">Programming Languages</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Python</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Java</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">C</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">C++</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">BASH / Shell Scripting</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">SQL</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">LaTeX</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Assembly (MIPS, RISC-V)</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">MBScript</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- Frameworks & Libraries -->
+                    <h3 class="skills__category">Frameworks &amp; Libraries</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">PyTorch</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">TensorFlow</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">NumPy</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Flask</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Streamlit</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">YOLOv10</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">REST API</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">JDBC &amp; PDFBox</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- Tools & Platforms -->
+                    <h3 class="skills__category">Tools &amp; Platforms</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Git</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">PostgreSQL</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Figma</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Linux &amp; Unix</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Windows</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">AWS &amp; Azure</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Raspberry Pi &amp; Arduino</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Unity</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- AI & Machine Learning -->
+                    <h3 class="skills__category">Artificial Intelligence</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Machine Learning &amp; Deep Learning</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Computer Vision (Neural Networks)</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Bayesian Networks &amp; Information Theory</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">AI Agents (Information-Theoretic, Model-Based, Goal-Based, Utility-Based)</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- Software Engineering -->
+                    <h3 class="skills__category">Software Engineering</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">OOP, MVC Architecture, System Design</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Agile, Scrum, DevOps</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Abstract Data Types &amp; Data Structures</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Algorithmic Paradigms (Divide &amp; Conquer, Greedy, DP, Decrease &amp; Conquer)</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- Embedded Systems -->
+                    <h3 class="skills__category">Embedded Systems &amp; Hardware</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Embedded Systems Design &amp; Implementation</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Hardware Schematics, Debouncing, Automation</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- Domain Expertise -->
+                    <h3 class="skills__category">Domain Expertise</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Security / Cryptography</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Computer Networks &amp; Server Infrastructure</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Formal Logic</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">Game Engines, VR/AR, GPU/CPU, GIS, DSP, Computer Graphics, Haptics</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                    <!-- Languages -->
+                    <h3 class="skills__category">Languages</h3>
+                    <div class="skills__data">
+                        <div class="skills__names"><i class='bx bxs-paint skills__icon'></i><span class="skills__name">English (Native), Standard Arabic (Professional), Saudi Arabic (Professional), Darija (Native), French (MIFI Francisation, 2025–2026)</span></div>
+                        <div class="skills__bar skills__general"></div>
+                        <div><span class="skills__percentage"></span></div>
+                    </div>
+
+                </div>
+
+                <div>
+                    <img src="assets/img/skillpic.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Work & Leadership</h2>
+
+            <div class="work__container bd-grid">
+                                <div class="work__item">
+                    <img src="assets/img/roai.png" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - 2026 <br> Founder &amp; President of the Robotics &amp; AI Society at Mount Allison University. Organized an exclusive screening of <em>The Thinking Game</em> in partnership with Google DeepMind's impact team.</p>
+                    </div>
+                </div>
+
+                                <div class="work__item">
+                    <img src="assets/img/techleadcoop.png" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">05 / 2024 - 09 / 2024<br> Fullstack Software Developer — AI Object Detection Framework &amp; Educational Tool. Secured $4,000 TD Ignite Grant; implemented YOLOv10 across Flask backend, Streamlit web interface, and Tkinter GUI with support for 243 languages.</p>
+                    </div>
+                </div>
+
+                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">03 / 2023 - 09 / 2024<br> Peer Tutor (Mathematics &amp; Computer Science) at Mount Allison University. Tutored 50+ students across various mathematical subjects with consistently positive feedback.</p>
+                    </div>
+                </div>
+
+                                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - 2025<br> Vice President &amp; Co-Founder of the Mature Students Club at Mount Allison University.</p>
+                    </div>
+                </div>
+
+                                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">01 / 2023 - 07 / 2023<br> Technical Lead for the Dorchester Moving Forward Co-Operative organization. Led data collection, mapping, and software development; collaborated with multiple departments to integrate technical solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED PROJECTS SECTION -->
+        <style>
+            .selected-project__card { color: #1a1a1a; }
+            .selected-project__card .project-title { color: #1a1a1a !important; font-size: 20px; margin-bottom: 8px; }
+            .selected-project__card .project-description { color: #4a4a4a !important; font-size: 14px; line-height: 1.5; }
+            .selected-project__card .stat-row span { color: #333; }
+            .selected-project__card .stat-label { font-weight: 600; }
+            .selected-project__card .stat-value { font-weight: 700; }
+            .bar-track { background: #e8e8e8; border-radius: 4px; height: 9px; overflow: hidden; }
+            .bar-fill { height: 100%; width: 0%; transition: width 1.2s ease; border-radius: 4px; }
+            .bar-fill--subs { background: #4C9AFF; }
+            .bar-fill--lifetime { background: #9B59FF; }
+            .bar-fill--views { background: #2ECC71; }
+            .favs-pill { display:inline-block; background:#FFF4D6; color:#8a6d00; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; margin-top:4px; }
+        </style>
+        <section class="selected-projects section" id="selected-projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="selected-projects__intro" style="text-align:center; max-width:720px; margin:0 auto 8px; color:var(--second-color);">
+                Statistics below are fetched live from the Steam Workshop API for three flagship Mount &amp; Blade: Warband overhauls I co-founded and led as lead developer.
+            </p>
+            <p id="steam-stats-badge" style="text-align:center; font-size:13px; margin:0 auto 40px; color:var(--first-color); font-weight:600;">● Loading live data from Steam Workshop API…</p>
+
+            <div class="selected-projects__legend" style="display:flex; justify-content:center; gap:24px; margin-bottom:32px; font-size:13px; color:#444;">
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#4C9AFF; margin-right:6px;"></span>Current Subscribers</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#9B59FF; margin-right:6px;"></span>Lifetime Subscribers</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#2ECC71; margin-right:6px;"></span>Views</span>
+            </div>
+
+            <div class="selected-projects__container bd-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
+
+                <!-- Floris Evolved -->
+                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
+                    <h3 class="project-title">Floris Evolved</h3>
+                    <p class="project-description">Co-founder &amp; developer of a full-scale overhaul for Mount &amp; Blade: Warband, engineering new gameplay systems, troop trees, and networking improvements for large-scale multiplayer.</p>
+
+                    <div class="selected-project__bars" style="margin:18px 0;">
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-floris-subs">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-floris-subs"></div></div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-floris-lifetime">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-floris-lifetimeSubs"></div></div>
+                        </div>
+                        <div class="stat-row">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-floris-views">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-floris-views"></div></div>
+                        </div>
+                    </div>
+                    <span class="favs-pill">★ <b id="stat-floris-favs">…</b> favorites</span>
+
+                    <div class="social-icons" style="margin-top:16px;">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=582428582" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://www.moddb.com/mods/floris-evolved" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6019/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- Medieval Conquests -->
+                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
+                    <h3 class="project-title">Medieval Conquests</h3>
+                    <p class="project-description">Founder &amp; lead developer of a Medieval Ages total conversion set in the 13th century, rebuilding core networking code to enable stable cooperative multiplayer.</p>
+
+                    <div class="selected-project__bars" style="margin:18px 0;">
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-medieval-subs">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-medieval-subs"></div></div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-medieval-lifetime">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-medieval-lifetimeSubs"></div></div>
+                        </div>
+                        <div class="stat-row">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-medieval-views">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-medieval-views"></div></div>
+                        </div>
+                    </div>
+                    <span class="favs-pill">★ <b id="stat-medieval-favs">…</b> favorites</span>
+
+                    <div class="social-icons" style="margin-top:16px;">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=770266833&searchtext=medieval+conquest" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/medieval-conquests" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/medieval-conquests" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6128" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- Tainted Paths -->
+                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
+                    <h3 class="project-title">Tainted Paths</h3>
+                    <p class="project-description">Built a full game modification spanning over 100,000 lines of custom code and custom assets, delivering a large-scale, choice-driven experience across multiple time periods and continents.</p>
+
+                    <div class="selected-project__bars" style="margin:18px 0;">
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-tainted-subs">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-tainted-subs"></div></div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-tainted-lifetime">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-tainted-lifetimeSubs"></div></div>
+                        </div>
+                        <div class="stat-row">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-tainted-views">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-tainted-views"></div></div>
+                        </div>
+                    </div>
+                    <span class="favs-pill">★ <b id="stat-tainted-favs">…</b> favorites</span>
+
+                    <div class="social-icons" style="margin-top:16px;">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1302156823" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/tainted-paths" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/tainted-paths" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6206/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects section" id="projects">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-container">
+
+                <!-- Content-Aware Enterprise Document Search (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="Content-Aware Enterprise Document Search">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Content-Aware Enterprise Document Search &amp; Management System</h3>
+                            <p class="project-description">Architected a decoupled MVC system using Dependency Injection to orchestrate state management, combined PostgreSQL's tsvector (O(log n) metadata retrieval) with a custom Java-based regex engine for deep PDF content analysis. Served as Technical Lead managing Agile/Scrum workflow, Git best practices, and CI/CD pipelines (Gradle).</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki?tab=repositories" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- Room Scanner & Voice Guidance (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="Room Scanner & Voice Guidance System">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Room Scanner &amp; Voice Guidance System</h3>
+                            <p class="project-description">Engineered an embedded room scanning system integrating YOLOv10 computer vision with custom hardware circuits (GPIO, LED indicators, push-button controls) on Raspberry Pi. Developed real-time voice feedback for object detection to provide guidance for blind individuals, with both hardware and software debouncing and full schematic documentation.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/room-scanner-rpi" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- Wordle AI Agent (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="Multi-Paradigm Wordle Puzzle Solver AI Agent">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Multi-Paradigm Wordle Puzzle Solver AI Agent</h3>
+                            <p class="project-description">Implemented four AI paradigms (Information-Theoretic, Model-Based, Goal-Based, Utility-Based) using entropy calculations and information gain maximization to achieve optimal 3–5 guess performance. Architected a Streamlit visualization dashboard displaying real-time AI decision-making with time complexity of O(W²L).</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/ai-vs-words" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- Multivariate Regression (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="Multivariate Regression Framework">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Multivariate Regression Framework</h3>
+                            <p class="project-description">Developed a machine learning framework from mathematical foundations, implementing gradient descent optimization, L2 regularization (Ridge), and closed-form solutions using PyTorch and NumPy. Conducted systematic experimental analysis across 5 dimensions demonstrating theoretical ML concepts in practice.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/MultivariateRegression" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- Variable Elimination (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="Variable Elimination for Bayesian Networks">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Variable Elimination for Bayesian Networks</h3>
+                            <p class="project-description">Implemented the Variable Elimination Algorithm for Bayesian Networks to compute probability distributions with evidence, enabling efficient probabilistic inference in complex networks.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/VariableEliminationAlgorithm" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- Dreamy Pastures (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="Dreamy Pastures Board Game Engine">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Dreamy Pastures (Multiplayer Board Game Engine)</h3>
+                            <p class="project-description">Collaboratively developed a local multiplayer board game in Java supporting up to 4 concurrent players with real-time state synchronization and turn-based game logic, demonstrating OOP Design Patterns and extensive UML Documentation.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/Dreamy-Pastures" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- RSA Encryption (NEW) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/placeholder.jpg" alt="RSA Encryption & Decryption System">
+                        <div class="project-overlay">
+                            <h3 class="project-title">RSA Encryption &amp; Decryption System</h3>
+                            <p class="project-description">Implemented RSA cryptographic algorithm from mathematical foundations, including key generation via prime number factorization, modular exponentiation, and Euler's totient function. Supports both file and string encryption/decryption with Unicode numeral representation and configurable security levels.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/RSA_Encryption_and_decryption" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+                <!-- Medieval Conquests (existing) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/mc.png" alt="Medieval Conquests">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Medieval Conquests</h3>
+                            <p class="project-description">Medieval Conquests is a Medieval Ages complete overhaul for Mount &amp; Blade: Warband, taking players back to the 13th century with a fresh new campaign and an improved networking code re-structure for viable co-operative gaming.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=770266833&searchtext=medieval+conquest" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/medieval-conquests" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/medieval-conquests" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6128" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- Floris Evolved (existing) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/project2.jpg" alt="Floris Evolved">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Floris Evolved</h3>
+                            <p class="project-description">As co-founder and developer of Floris Evolved, a major overhaul for Mount &amp; Blade: Warband, I played a critical role in transforming the original game into a new and exciting experience. With 160,000+ active unique subscribers on Steam and 600,000 distinct visitors and overwhelmingly positive ratings, the project was a resounding success.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=582428582" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://www.moddb.com/mods/floris-evolved" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6019/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- Tainted Paths (existing) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/tp.jpg" alt="Tainted Paths">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Tainted Paths</h3>
+                            <p class="project-description">Tainted Paths is a full game modification of Mount &amp; Blade: Warband written with over 100,000 lines of custom code and custom assets, providing a large-scale experience across multiple time periods and continents shaped by player choices.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1302156823" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/tainted-paths" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/tainted-paths" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6206/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- EAHI (existing) -->
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/img/EAHI.png" alt="EAHI">
+                        <div class="project-overlay">
+                            <h3 class="project-title">Expanded Avatar Hand Interactions (EAHI)</h3>
+                            <p class="project-description">EAHI is a framework established by Faycal Kilali with the goal of expanding the functionality of avatars within Virtual Reality software.</p>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/faycalki/EAHI" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!--===== AWARDS & ACCOMPLISHMENTS =====-->
+<section class="awards section" id="awards">
+    <h2 class="section-title">Awards &amp; Accomplishments</h2>
+
+    <div class="awards__container bd-grid">
+
+        <div class="awards__item">
+    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
+    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
+    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
+</div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
+            <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
+            <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
+        </div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
+            <p class="awards__institution">Mount Allison University</p>
+            <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
+        </div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
+            <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
+        </div>
+    </div>
+</section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact__text">To get in touch, please email me at <a href="mailto:root@faycalkilali.com">root@faycalkilali.com</a>.</p>
+        </section>
+
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Faycal Kilali</p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/faycal-kilali-81940a258/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/faycalki" target="_blank" class="footer__icon"><i class='bx bxl-github'></i></a>
+        </div>
+        <p class="footer__copy">&copy; Faycal Kilali, All Rights Reserved.</p>
+    </footer>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+        <script src="assets/js/steam-stats.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
