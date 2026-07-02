@@ -66,18 +66,16 @@
         }
     }
 
-    function fillRing(id, value, visualMax) {
-        try {
-            const ring = document.getElementById(id);
-            if (!ring) return;
-            const pct = Math.min(1, value / visualMax);
-            const circumference = 264;
-            const offset = circumference - (pct * circumference);
-            requestAnimationFrame(() => { ring.style.strokeDashoffset = offset; });
-        } catch (err) {
-            console.warn(`fillRing failed for ${id}:`, err);
-        }
+function fillBar(id, value, visualMax) {
+    try {
+        const bar = document.getElementById(id);
+        if (!bar) return;
+        const pct = Math.min(100, (value / visualMax) * 100);
+        requestAnimationFrame(() => { bar.style.height = pct + '%'; });
+    } catch (err) {
+        console.warn(`fillBar failed for ${id}:`, err);
     }
+}
 
     function renderHeroStrip(data) {
         try {
