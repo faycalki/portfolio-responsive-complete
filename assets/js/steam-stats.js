@@ -65,25 +65,27 @@ function renderStats(data) {
             console.warn("renderBars failed:", err);
         }
     }
+function renderHeroStrip(data) {
+    try {
+        const keys = Object.keys(FALLBACK);
+        const values = keys.map(k => data[k] || FALLBACK[k]);
+        const totalLifetime = values.reduce((s, d) => s + (d.lifetimeSubs || 0), 0);
+        const totalViews = values.reduce((s, d) => s + (d.views || 0), 0);
+        const totalCurrentSubs = values.reduce((s, d) => s + (d.subs || 0), 0);
 
-    function renderHeroStrip(data) {
-        try {
-            const keys = Object.keys(FALLBACK);
-            const values = keys.map(k => data[k] || FALLBACK[k]);
-            const totalLifetime = values.reduce((s, d) => s + (d.lifetimeSubs || 0), 0);
-            const totalViews = values.reduce((s, d) => s + (d.views || 0), 0);
+        const viewsEl = document.getElementById('hero-stat-views');
+        const lifetimeEl = document.getElementById('hero-stat-lifetime');
+        const currentSubsEl = document.getElementById('hero-stat-current-subs');
+        const projectsEl = document.getElementById('hero-stat-projects');
 
-            const lifetimeEl = document.getElementById('hero-stat-lifetime');
-            const viewsEl = document.getElementById('hero-stat-views');
-            const projectsEl = document.getElementById('hero-stat-projects');
-
-            if (lifetimeEl) lifetimeEl.textContent = formatCompact(totalLifetime);
-            if (viewsEl) viewsEl.textContent = formatCompact(totalViews);
-            if (projectsEl) projectsEl.textContent = values.length.toString();
-        } catch (err) {
-            console.warn("renderHeroStrip failed:", err);
-        }
+        if (viewsEl) viewsEl.textContent = formatCompact(totalViews);
+        if (lifetimeEl) lifetimeEl.textContent = formatCompact(totalLifetime);
+        if (currentSubsEl) currentSubsEl.textContent = formatCompact(totalCurrentSubs);
+        if (projectsEl) projectsEl.textContent = values.length.toString();
+    } catch (err) {
+        console.warn("renderHeroStrip failed:", err);
     }
+}
 
     function showBadge(isLive) {
         const badge = document.getElementById('steam-stats-badge');
