@@ -32,11 +32,11 @@ Natural Language Processing, Computer Vision, Data Scientist, Yoshua Bengio, Gil
                     <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#selected-projects" class="nav__link">Selected Projects</a></li>
-                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="#awards" class="nav__link">Awards</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -176,6 +176,198 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                 </div>
             </div>
         </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Work & Leadership</h2>
+
+            <div class="work__container bd-grid">
+                                <div class="work__item">
+                    <img src="assets/img/roai.png" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - 2026 <br> Founder &amp; President of the Robotics &amp; AI Society at Mount Allison University. Organized an exclusive screening of <em>The Thinking Game</em> in partnership with Google DeepMind's impact team.</p>
+                    </div>
+                </div>
+
+                                <div class="work__item">
+                    <img src="assets/img/techleadcoop.png" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">05 / 2024 - 09 / 2024<br> Fullstack Software Developer — AI Object Detection Framework &amp; Educational Tool. Secured $4,000 TD Ignite Grant; implemented YOLOv10 across Flask backend, Streamlit web interface, and Tkinter GUI with support for 243 languages.</p>
+                    </div>
+                </div>
+
+                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">03 / 2023 - 09 / 2024<br> Peer Tutor (Mathematics &amp; Computer Science) at Mount Allison University. Tutored 50+ students across various mathematical subjects with consistently positive feedback.</p>
+                    </div>
+                </div>
+
+                                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">2023 - 2025<br> Vice President &amp; Co-Founder of the Mature Students Club at Mount Allison University.</p>
+                    </div>
+                </div>
+
+                                <div class="work__item">
+                    <img src="assets/img/work4.jpg" alt="" class="work__img">
+                    <div class="work__overlay">
+                        <p class="work__description">01 / 2023 - 07 / 2023<br> Technical Lead for the Dorchester Moving Forward Co-Operative organization. Led data collection, mapping, and software development; collaborated with multiple departments to integrate technical solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SELECTED PROJECTS SECTION -->
+        <style>
+            .selected-project__card { color: #1a1a1a; }
+            .selected-project__card .project-title { color: #1a1a1a !important; font-size: 20px; margin-bottom: 8px; }
+            .selected-project__card .project-description { color: #4a4a4a !important; font-size: 14px; line-height: 1.5; }
+            .selected-project__card .stat-row span { color: #333; }
+            .selected-project__card .stat-label { font-weight: 600; }
+            .selected-project__card .stat-value { font-weight: 700; }
+            .bar-track { background: #e8e8e8; border-radius: 4px; height: 9px; overflow: hidden; }
+            .bar-fill { height: 100%; width: 0%; transition: width 1.2s ease; border-radius: 4px; }
+            .bar-fill--subs { background: #4C9AFF; }
+            .bar-fill--lifetime { background: #9B59FF; }
+            .bar-fill--views { background: #2ECC71; }
+            .favs-pill { display:inline-block; background:#FFF4D6; color:#8a6d00; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; margin-top:4px; }
+        </style>
+        <section class="selected-projects section" id="selected-projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="selected-projects__intro" style="text-align:center; max-width:720px; margin:0 auto 8px; color:var(--second-color);">
+                Statistics below are fetched live from the Steam Workshop API for three flagship Mount &amp; Blade: Warband overhauls I co-founded and led as lead developer.
+            </p>
+            <p id="steam-stats-badge" style="text-align:center; font-size:13px; margin:0 auto 40px; color:var(--first-color); font-weight:600;">● Loading live data from Steam Workshop API…</p>
+
+            <div class="selected-projects__legend" style="display:flex; justify-content:center; gap:24px; margin-bottom:32px; font-size:13px; color:#444;">
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#4C9AFF; margin-right:6px;"></span>Current Subscribers</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#9B59FF; margin-right:6px;"></span>Lifetime Subscribers</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#2ECC71; margin-right:6px;"></span>Views</span>
+            </div>
+
+            <div class="selected-projects__container bd-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
+
+                <!-- Floris Evolved -->
+                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
+                    <h3 class="project-title">Floris Evolved</h3>
+                    <p class="project-description">Co-founder &amp; developer of a full-scale overhaul for Mount &amp; Blade: Warband, engineering new gameplay systems, troop trees, and networking improvements for large-scale multiplayer.</p>
+
+                    <div class="selected-project__bars" style="margin:18px 0;">
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-floris-subs">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-floris-subs"></div></div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-floris-lifetime">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-floris-lifetimeSubs"></div></div>
+                        </div>
+                        <div class="stat-row">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-floris-views">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-floris-views"></div></div>
+                        </div>
+                    </div>
+                    <span class="favs-pill">★ <b id="stat-floris-favs">…</b> favorites</span>
+
+                    <div class="social-icons" style="margin-top:16px;">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=582428582" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://www.moddb.com/mods/floris-evolved" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6019/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- Medieval Conquests -->
+                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
+                    <h3 class="project-title">Medieval Conquests</h3>
+                    <p class="project-description">Founder &amp; lead developer of a Medieval Ages total conversion set in the 13th century, rebuilding core networking code to enable stable cooperative multiplayer.</p>
+
+                    <div class="selected-project__bars" style="margin:18px 0;">
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-medieval-subs">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-medieval-subs"></div></div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-medieval-lifetime">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-medieval-lifetimeSubs"></div></div>
+                        </div>
+                        <div class="stat-row">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-medieval-views">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-medieval-views"></div></div>
+                        </div>
+                    </div>
+                    <span class="favs-pill">★ <b id="stat-medieval-favs">…</b> favorites</span>
+
+                    <div class="social-icons" style="margin-top:16px;">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=770266833&searchtext=medieval+conquest" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/medieval-conquests" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/medieval-conquests" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6128" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+                <!-- Tainted Paths -->
+                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
+                    <h3 class="project-title">Tainted Paths</h3>
+                    <p class="project-description">Built a full game modification spanning over 100,000 lines of custom code and custom assets, delivering a large-scale, choice-driven experience across multiple time periods and continents.</p>
+
+                    <div class="selected-project__bars" style="margin:18px 0;">
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-tainted-subs">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-tainted-subs"></div></div>
+                        </div>
+                        <div class="stat-row" style="margin-bottom:10px;">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-tainted-lifetime">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-tainted-lifetimeSubs"></div></div>
+                        </div>
+                        <div class="stat-row">
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-tainted-views">…</span></div>
+                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-tainted-views"></div></div>
+                        </div>
+                    </div>
+                    <span class="favs-pill">★ <b id="stat-tainted-favs">…</b> favorites</span>
+
+                    <div class="social-icons" style="margin-top:16px;">
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1302156823" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
+                        <a href="https://github.com/faycalki/tainted-paths" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
+                        <a href="https://www.moddb.com/mods/tainted-paths" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
+                        <a href="https://www.nexusmods.com/mbwarband/mods/6206/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!--===== AWARDS & ACCOMPLISHMENTS =====-->
+<section class="awards section" id="awards">
+    <h2 class="section-title">Awards &amp; Accomplishments</h2>
+
+    <div class="awards__container bd-grid">
+
+        <div class="awards__item">
+    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
+    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
+    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
+</div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
+            <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
+            <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
+        </div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
+            <p class="awards__institution">Mount Allison University</p>
+            <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
+        </div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
+            <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
+        </div>
+    </div>
+</section>
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
@@ -420,167 +612,6 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             </div>
         </section>
 
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Work & Leadership</h2>
-
-            <div class="work__container bd-grid">
-                                <div class="work__item">
-                    <img src="assets/img/roai.png" alt="" class="work__img">
-                    <div class="work__overlay">
-                        <p class="work__description">2023 - 2026 <br> Founder &amp; President of the Robotics &amp; AI Society at Mount Allison University. Organized an exclusive screening of <em>The Thinking Game</em> in partnership with Google DeepMind's impact team.</p>
-                    </div>
-                </div>
-
-                                <div class="work__item">
-                    <img src="assets/img/techleadcoop.png" alt="" class="work__img">
-                    <div class="work__overlay">
-                        <p class="work__description">05 / 2024 - 09 / 2024<br> Fullstack Software Developer — AI Object Detection Framework &amp; Educational Tool. Secured $4,000 TD Ignite Grant; implemented YOLOv10 across Flask backend, Streamlit web interface, and Tkinter GUI with support for 243 languages.</p>
-                    </div>
-                </div>
-
-                <div class="work__item">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-                    <div class="work__overlay">
-                        <p class="work__description">03 / 2023 - 09 / 2024<br> Peer Tutor (Mathematics &amp; Computer Science) at Mount Allison University. Tutored 50+ students across various mathematical subjects with consistently positive feedback.</p>
-                    </div>
-                </div>
-
-                                <div class="work__item">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-                    <div class="work__overlay">
-                        <p class="work__description">2023 - 2025<br> Vice President &amp; Co-Founder of the Mature Students Club at Mount Allison University.</p>
-                    </div>
-                </div>
-
-                                <div class="work__item">
-                    <img src="assets/img/work4.jpg" alt="" class="work__img">
-                    <div class="work__overlay">
-                        <p class="work__description">01 / 2023 - 07 / 2023<br> Technical Lead for the Dorchester Moving Forward Co-Operative organization. Led data collection, mapping, and software development; collaborated with multiple departments to integrate technical solutions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SELECTED PROJECTS SECTION -->
-        <style>
-            .selected-project__card { color: #1a1a1a; }
-            .selected-project__card .project-title { color: #1a1a1a !important; font-size: 20px; margin-bottom: 8px; }
-            .selected-project__card .project-description { color: #4a4a4a !important; font-size: 14px; line-height: 1.5; }
-            .selected-project__card .stat-row span { color: #333; }
-            .selected-project__card .stat-label { font-weight: 600; }
-            .selected-project__card .stat-value { font-weight: 700; }
-            .bar-track { background: #e8e8e8; border-radius: 4px; height: 9px; overflow: hidden; }
-            .bar-fill { height: 100%; width: 0%; transition: width 1.2s ease; border-radius: 4px; }
-            .bar-fill--subs { background: #4C9AFF; }
-            .bar-fill--lifetime { background: #9B59FF; }
-            .bar-fill--views { background: #2ECC71; }
-            .favs-pill { display:inline-block; background:#FFF4D6; color:#8a6d00; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; margin-top:4px; }
-        </style>
-        <section class="selected-projects section" id="selected-projects">
-            <h2 class="section-title">Selected Projects</h2>
-            <p class="selected-projects__intro" style="text-align:center; max-width:720px; margin:0 auto 8px; color:var(--second-color);">
-                Statistics below are fetched live from the Steam Workshop API for three flagship Mount &amp; Blade: Warband overhauls I co-founded and led as lead developer.
-            </p>
-            <p id="steam-stats-badge" style="text-align:center; font-size:13px; margin:0 auto 40px; color:var(--first-color); font-weight:600;">● Loading live data from Steam Workshop API…</p>
-
-            <div class="selected-projects__legend" style="display:flex; justify-content:center; gap:24px; margin-bottom:32px; font-size:13px; color:#444;">
-                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#4C9AFF; margin-right:6px;"></span>Current Subscribers</span>
-                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#9B59FF; margin-right:6px;"></span>Lifetime Subscribers</span>
-                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#2ECC71; margin-right:6px;"></span>Views</span>
-            </div>
-
-            <div class="selected-projects__container bd-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
-
-                <!-- Floris Evolved -->
-                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
-                    <h3 class="project-title">Floris Evolved</h3>
-                    <p class="project-description">Co-founder &amp; developer of a full-scale overhaul for Mount &amp; Blade: Warband, engineering new gameplay systems, troop trees, and networking improvements for large-scale multiplayer.</p>
-
-                    <div class="selected-project__bars" style="margin:18px 0;">
-                        <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-floris-subs">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-floris-subs"></div></div>
-                        </div>
-                        <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-floris-lifetime">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-floris-lifetimeSubs"></div></div>
-                        </div>
-                        <div class="stat-row">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-floris-views">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-floris-views"></div></div>
-                        </div>
-                    </div>
-                    <span class="favs-pill">★ <b id="stat-floris-favs">…</b> favorites</span>
-
-                    <div class="social-icons" style="margin-top:16px;">
-                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=582428582" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
-                        <a href="https://www.moddb.com/mods/floris-evolved" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
-                        <a href="https://www.nexusmods.com/mbwarband/mods/6019/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
-                    </div>
-                </div>
-
-                <!-- Medieval Conquests -->
-                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
-                    <h3 class="project-title">Medieval Conquests</h3>
-                    <p class="project-description">Founder &amp; lead developer of a Medieval Ages total conversion set in the 13th century, rebuilding core networking code to enable stable cooperative multiplayer.</p>
-
-                    <div class="selected-project__bars" style="margin:18px 0;">
-                        <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-medieval-subs">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-medieval-subs"></div></div>
-                        </div>
-                        <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-medieval-lifetime">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-medieval-lifetimeSubs"></div></div>
-                        </div>
-                        <div class="stat-row">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-medieval-views">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-medieval-views"></div></div>
-                        </div>
-                    </div>
-                    <span class="favs-pill">★ <b id="stat-medieval-favs">…</b> favorites</span>
-
-                    <div class="social-icons" style="margin-top:16px;">
-                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=770266833&searchtext=medieval+conquest" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
-                        <a href="https://github.com/faycalki/medieval-conquests" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
-                        <a href="https://www.moddb.com/mods/medieval-conquests" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
-                        <a href="https://www.nexusmods.com/mbwarband/mods/6128" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
-                    </div>
-                </div>
-
-                <!-- Tainted Paths -->
-                <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
-                    <h3 class="project-title">Tainted Paths</h3>
-                    <p class="project-description">Built a full game modification spanning over 100,000 lines of custom code and custom assets, delivering a large-scale, choice-driven experience across multiple time periods and continents.</p>
-
-                    <div class="selected-project__bars" style="margin:18px 0;">
-                        <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-tainted-subs">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-tainted-subs"></div></div>
-                        </div>
-                        <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-tainted-lifetime">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-tainted-lifetimeSubs"></div></div>
-                        </div>
-                        <div class="stat-row">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-tainted-views">…</span></div>
-                            <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-tainted-views"></div></div>
-                        </div>
-                    </div>
-                    <span class="favs-pill">★ <b id="stat-tainted-favs">…</b> favorites</span>
-
-                    <div class="social-icons" style="margin-top:16px;">
-                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1302156823" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
-                        <a href="https://github.com/faycalki/tainted-paths" target="_blank"><img src="assets/img/github-mark.png" alt="GitHub"></a>
-                        <a href="https://www.moddb.com/mods/tainted-paths" target="_blank"><img src="assets/img/ModDB_Logo.png" alt="Mod Db"></a>
-                        <a href="https://www.nexusmods.com/mbwarband/mods/6206/" target="_blank"><img src="assets/img/NexusModManagerIcon.png" alt="Nexus Mods"></a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
         <!-- PROJECTS SECTION -->
         <section class="projects section" id="projects">
             <h2 class="section-title">Projects</h2>
@@ -751,38 +782,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             </div>
         </section>
 
-<!--===== AWARDS & ACCOMPLISHMENTS =====-->
-<section class="awards section" id="awards">
-    <h2 class="section-title">Awards &amp; Accomplishments</h2>
-
-    <div class="awards__container bd-grid">
-
-        <div class="awards__item">
-    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
-    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
-    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
-</div>
-
-        <div class="awards__item">
-            <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
-            <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
-            <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
-        </div>
-
-        <div class="awards__item">
-            <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
-            <p class="awards__institution">Mount Allison University</p>
-            <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
-        </div>
-
-        <div class="awards__item">
-            <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
-            <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
-        </div>
-    </div>
-</section>
-
-        <!--===== CONTACT =====-->
+<!--===== CONTACT =====-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <p class="contact__text">To get in touch, please email me at <a href="mailto:root@faycalkilali.com">root@faycalkilali.com</a>.</p>
