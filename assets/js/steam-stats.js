@@ -36,9 +36,13 @@
             if (lifeEl) lifeEl.textContent = d.lifetimeSubs.toLocaleString();
             if (viewsEl) viewsEl.textContent = d.views.toLocaleString();
             if (favsEl) favsEl.textContent = d.favs.toLocaleString();
-            if (ratingEl && d.stars != null) {
-                const ratingsCount = d.numRatings ? d.numRatings.toLocaleString() : '?';
-                ratingEl.textContent = `${starGlyphs(d.stars)} (${ratingsCount} ratings)`;
+
+            // Always guarantee a rating value is shown, falling back to cached data
+            // if live scrape returned incomplete/null fields.
+            const stars = (d.stars != null) ? d.stars : FALLBACK[p.key].stars;
+            const numRatings = (d.numRatings != null) ? d.numRatings : FALLBACK[p.key].numRatings;
+            if (ratingEl) {
+                ratingEl.textContent = `${starGlyphs(stars)} (${numRatings.toLocaleString()} ratings)`;
             }
         });
         renderBars(data);
@@ -63,10 +67,15 @@
         const values = Object.values(data);
         const totalLifetime = values.reduce((sum, d) => sum + (d.lifetimeSubs || 0), 0);
         const totalViews = values.reduce((sum, d) => sum + (d.views || 0), 0);
+        const totalProjects = values.length;
+
         const lifetimeEl = document.getElementById('hero-stat-lifetime');
         const viewsEl = document.getElementById('hero-stat-views');
+        const projectsEl = document.getElementById('hero-stat-projects');
+
         if (lifetimeEl) lifetimeEl.textContent = formatCompact(totalLifetime);
         if (viewsEl) viewsEl.textContent = formatCompact(totalViews);
+        if (projectsEl) projectsEl.textContent = totalProjects.toString();
     }
 
     function showLiveBadge(isLive) {
@@ -87,7 +96,10 @@
 
         const res = await fetch(proxied, {
             method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "x-requested-with": "XMLHttpRequest"
+            },
             body: body.toString()
         });
         if (!res.ok) throw new Error("Bad response " + res.status);
@@ -112,16 +124,25 @@
         try {
             const pageUrl = `https://steamcommunity.com/sharedfiles/filedetails/?id=${project.id}`;
             const proxied = "https://proxy.cors.sh/" + pageUrl;
-            const res = await fetch(proxied, { headers: { "User-Agent": "Mozilla/5.0" } });
+            const res = await fetch(proxied, {
+                headers: { "x-requested-with": "XMLHttpRequest" }
+            });
             if (!res.ok) throw new Error("Bad response " + res.status);
             const text = await res.text();
 
             const starMatch = text.match(/\/(\d)(?:_half)?-star_large\.png/);
             const numMatch = text.match(/numRatings">([\d,]+) ratings/);
 
+            // If either field failed to parse, treat the whole result as invalid
+            // so the caller falls back to cached data instead of showing blanks.
+            if (!starMatch || !numMatch) {
+                console.warn(`Rating parse incomplete for ${project.key}, using cached value.`);
+                return null;
+            }
+
             return {
-                stars: starMatch ? Number(starMatch[1]) : null,
-                numRatings: numMatch ? Number(numMatch[1].replace(/,/g, '')) : null
+                stars: Number(starMatch[1]),
+                numRatings: Number(numMatch[1].replace(/,/g, ''))
             };
         } catch (err) {
             console.warn(`Rating fetch failed for ${project.key}:`, err);
@@ -136,7 +157,7 @@
             const ratingResults = await Promise.all(STEAM_PROJECTS.map(fetchRating));
             STEAM_PROJECTS.forEach((p, i) => {
                 const rating = ratingResults[i];
-                if (coreStats[p.key] && rating) {
+                if (coreStats[p.key] && rating && rating.stars != null && rating.numRatings != null) {
                     coreStats[p.key].stars = rating.stars;
                     coreStats[p.key].numRatings = rating.numRatings;
                 } else if (coreStats[p.key]) {
