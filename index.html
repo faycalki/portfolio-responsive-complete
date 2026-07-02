@@ -159,7 +159,7 @@ teaching centres, founded by Yoshua Bengio</em> &mdash; spanning deep learning, 
 learning, self-supervised &amp; meta-learning, reinforcement learning, generative models (GANs,
 GFlowNets, diffusion models), NLP &amp; LLMs, computer vision, probabilistic inference,
 optimization, graph &amp; geometric deep learning, and AI applications in science &amp; robotics.</li>
-
+                        
 <li>Admitted from a competitive applicant pool for CS, with the department awarding only about <b>~50 graduate degrees per year in Computer Science</b>.</li>
                     </ul>
                 </div>
@@ -214,7 +214,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                         <p class="work__description">2023 - 2025<br> Vice President &amp; Co-Founder of the Mature Students Club at Mount Allison University.</p>
                     </div>
                 </div>
-
+                
                                 <div class="work__item">
                     <img src="assets/img/work4.jpg" alt="" class="work__img">
                     <div class="work__overlay">
@@ -238,18 +238,19 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             .bar-fill--lifetime { background: #9B59FF; }
             .bar-fill--views { background: #2ECC71; }
             .favs-pill { display:inline-block; background:#FFF4D6; color:#8a6d00; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; margin-top:4px; }
+            .rating-pill { display:inline-block; background:#E6F4EA; color:#1e7e34; font-size:12px; font-weight:700; padding:4px 10px; border-radius:20px; margin-top:4px; }
         </style>
         <section class="selected-projects section" id="selected-projects">
             <h2 class="section-title">Selected Projects</h2>
             <p class="selected-projects__intro" style="text-align:center; max-width:720px; margin:0 auto 8px; color:var(--second-color);">
-                Statistics below are fetched live from the Steam Workshop API for three flagship Mount &amp; Blade: Warband overhauls I co-founded and led as lead developer.
+                Live adoption metrics — fetched in real time via a public distribution platform's API — for three large-scale software systems I engineered and led as lead developer, each independently designed, built, and shipped to production.
             </p>
-            <p id="steam-stats-badge" style="text-align:center; font-size:13px; margin:0 auto 40px; color:var(--first-color); font-weight:600;">● Loading live data from Steam Workshop API…</p>
+            <p id="steam-stats-badge" style="text-align:center; font-size:13px; margin:0 auto 40px; color:var(--first-color); font-weight:600;">● Loading live adoption data…</p>
 
             <div class="selected-projects__legend" style="display:flex; justify-content:center; gap:24px; margin-bottom:32px; font-size:13px; color:#444;">
-                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#4C9AFF; margin-right:6px;"></span>Current Subscribers</span>
-                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#9B59FF; margin-right:6px;"></span>Lifetime Subscribers</span>
-                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#2ECC71; margin-right:6px;"></span>Views</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#4C9AFF; margin-right:6px;"></span>Active Users</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#9B59FF; margin-right:6px;"></span>Total Installs</span>
+                <span><span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#2ECC71; margin-right:6px;"></span>Page Views</span>
             </div>
 
             <div class="selected-projects__container bd-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
@@ -257,23 +258,23 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                 <!-- Floris Evolved -->
                 <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
                     <h3 class="project-title">Floris Evolved</h3>
-                    <p class="project-description">Co-founder &amp; developer of a full-scale overhaul for Mount &amp; Blade: Warband, engineering new gameplay systems, troop trees, and networking improvements for large-scale multiplayer.</p>
+                    <p class="project-description">Co-founder &amp; developer of a full-scale software system overhaul, engineering new feature architecture, custom data structures, and networking improvements for large-scale concurrent multi-user sessions.</p>
 
                     <div class="selected-project__bars" style="margin:18px 0;">
                         <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-floris-subs">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Active Users</span><span class="stat-value" id="stat-floris-subs">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-floris-subs"></div></div>
                         </div>
                         <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-floris-lifetime">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Total Installs</span><span class="stat-value" id="stat-floris-lifetime">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-floris-lifetimeSubs"></div></div>
                         </div>
                         <div class="stat-row">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-floris-views">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Page Views</span><span class="stat-value" id="stat-floris-views">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-floris-views"></div></div>
                         </div>
                     </div>
-                    <span class="favs-pill">★ <b id="stat-floris-favs">…</b> favorites</span>
+                    <span class="favs-pill">★ <b id="stat-floris-favs">…</b> favorites</span> <span class="rating-pill" id="rating-floris">…</span>
 
                     <div class="social-icons" style="margin-top:16px;">
                         <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=582428582" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
@@ -285,23 +286,23 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                 <!-- Medieval Conquests -->
                 <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
                     <h3 class="project-title">Medieval Conquests</h3>
-                    <p class="project-description">Founder &amp; lead developer of a Medieval Ages total conversion set in the 13th century, rebuilding core networking code to enable stable cooperative multiplayer.</p>
+                    <p class="project-description">Founder &amp; lead developer of a large-scale software system rebuild, re-architecting core networking code to enable stable, high-concurrency real-time collaboration.</p>
 
                     <div class="selected-project__bars" style="margin:18px 0;">
                         <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-medieval-subs">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Active Users</span><span class="stat-value" id="stat-medieval-subs">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-medieval-subs"></div></div>
                         </div>
                         <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-medieval-lifetime">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Total Installs</span><span class="stat-value" id="stat-medieval-lifetime">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-medieval-lifetimeSubs"></div></div>
                         </div>
                         <div class="stat-row">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-medieval-views">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Page Views</span><span class="stat-value" id="stat-medieval-views">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-medieval-views"></div></div>
                         </div>
                     </div>
-                    <span class="favs-pill">★ <b id="stat-medieval-favs">…</b> favorites</span>
+                    <span class="favs-pill">★ <b id="stat-medieval-favs">…</b> favorites</span> <span class="rating-pill" id="rating-medieval">…</span>
 
                     <div class="social-icons" style="margin-top:16px;">
                         <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=770266833&searchtext=medieval+conquest" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
@@ -314,23 +315,23 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                 <!-- Tainted Paths -->
                 <div class="selected-project__card" style="border:1px solid rgba(0,0,0,0.08); border-radius:10px; padding:24px; box-shadow:0 2px 8px rgba(0,0,0,0.06); background:#fff;">
                     <h3 class="project-title">Tainted Paths</h3>
-                    <p class="project-description">Built a full game modification spanning over 100,000 lines of custom code and custom assets, delivering a large-scale, choice-driven experience across multiple time periods and continents.</p>
+                    <p class="project-description">Built a full production system spanning over 100,000 lines of custom code, delivering a large-scale, state-driven application architecture with extensive branching logic and content pipelines.</p>
 
                     <div class="selected-project__bars" style="margin:18px 0;">
                         <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Current Subscribers</span><span class="stat-value" id="stat-tainted-subs">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Active Users</span><span class="stat-value" id="stat-tainted-subs">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--subs" id="bar-tainted-subs"></div></div>
                         </div>
                         <div class="stat-row" style="margin-bottom:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Lifetime Subscribers</span><span class="stat-value" id="stat-tainted-lifetime">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Total Installs</span><span class="stat-value" id="stat-tainted-lifetime">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--lifetime" id="bar-tainted-lifetimeSubs"></div></div>
                         </div>
                         <div class="stat-row">
-                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Views</span><span class="stat-value" id="stat-tainted-views">…</span></div>
+                            <div style="display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px;"><span class="stat-label">Page Views</span><span class="stat-value" id="stat-tainted-views">…</span></div>
                             <div class="bar-track"><div class="bar-fill bar-fill--views" id="bar-tainted-views"></div></div>
                         </div>
                     </div>
-                    <span class="favs-pill">★ <b id="stat-tainted-favs">…</b> favorites</span>
+                    <span class="favs-pill">★ <b id="stat-tainted-favs">…</b> favorites</span> <span class="rating-pill" id="rating-tainted">…</span>
 
                     <div class="social-icons" style="margin-top:16px;">
                         <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=1302156823" target="_blank"><img src="assets/img/Steam_icon_logo.png" alt="Steam Workshop"></a>
@@ -344,35 +345,35 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
         </section>
 
         <!--===== AWARDS & ACCOMPLISHMENTS =====-->
-<section class="awards section" id="awards">
-    <h2 class="section-title">Awards &amp; Accomplishments</h2>
+        <section class="awards section" id="awards">
+            <h2 class="section-title">Awards &amp; Accomplishments</h2>
 
-    <div class="awards__container bd-grid">
+            <div class="awards__container bd-grid">
 
-        <div class="awards__item">
-    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
-    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
-    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
-</div>
+                <div class="awards__item">
+                    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
+                    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
+                    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
+                </div>
+                
+                <div class="awards__item">
+                    <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
+                    <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
+                    <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
+                </div>
 
-        <div class="awards__item">
-            <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
-            <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
-            <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
-        </div>
+                <div class="awards__item">
+                    <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
+                    <p class="awards__institution">Mount Allison University</p>
+                    <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
+                </div>
 
-        <div class="awards__item">
-            <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
-            <p class="awards__institution">Mount Allison University</p>
-            <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
-        </div>
-
-        <div class="awards__item">
-            <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
-            <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
-        </div>
-    </div>
-</section>
+                <div class="awards__item">
+                    <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
+                    <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
+                </div>
+            </div>
+        </section>
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
@@ -622,7 +623,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
 
-                <!-- Content-Aware Enterprise Document Search (NEW) -->
+                <!-- Content-Aware Enterprise Document Search -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Content-Aware Enterprise Document Search">
@@ -636,7 +637,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Room Scanner & Voice Guidance (NEW) -->
+                <!-- Room Scanner & Voice Guidance -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Room Scanner & Voice Guidance System">
@@ -650,7 +651,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Wordle AI Agent (NEW) -->
+                <!-- Wordle AI Agent -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Multi-Paradigm Wordle Puzzle Solver AI Agent">
@@ -664,7 +665,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Multivariate Regression (NEW) -->
+                <!-- Multivariate Regression -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Multivariate Regression Framework">
@@ -678,7 +679,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Variable Elimination (NEW) -->
+                <!-- Variable Elimination -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Variable Elimination for Bayesian Networks">
@@ -692,7 +693,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Dreamy Pastures (NEW) -->
+                <!-- Dreamy Pastures -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Dreamy Pastures Board Game Engine">
@@ -706,7 +707,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- RSA Encryption (NEW) -->
+                <!-- RSA Encryption -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="RSA Encryption & Decryption System">
@@ -720,7 +721,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Medieval Conquests (existing) -->
+                <!-- Medieval Conquests -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/mc.png" alt="Medieval Conquests">
@@ -737,7 +738,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Floris Evolved (existing) -->
+                <!-- Floris Evolved -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/project2.jpg" alt="Floris Evolved">
@@ -753,7 +754,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Tainted Paths (existing) -->
+                <!-- Tainted Paths -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/tp.jpg" alt="Tainted Paths">
@@ -770,7 +771,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- EAHI (existing) -->
+                <!-- EAHI -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/EAHI.png" alt="EAHI">
@@ -787,7 +788,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             </div>
         </section>
 
-<!--===== CONTACT =====-->
+        <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <p class="contact__text">To get in touch, please email me at <a href="mailto:root@faycalkilali.com">root@faycalkilali.com</a>.</p>
@@ -809,8 +810,8 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--===== MAIN JS =====-->
-        <script src="assets/js/steam-stats.js"></script>
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/steam-stats.js"></script>
 </body>
 
 </html>
