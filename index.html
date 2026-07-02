@@ -50,6 +50,50 @@ Natural Language Processing, Computer Vision, Data Scientist, Yoshua Bengio, Gil
     <main class="l-main">
 
         <!--===== HOME =====-->
+        <style>
+            .hero-stats-bar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                padding: 18px 32px;
+                max-width: 900px;
+                border-radius: 14px;
+                background: linear-gradient(90deg, rgba(76,154,255,0.08), rgba(155,89,255,0.08), rgba(46,204,113,0.08));
+                border: 1px solid rgba(0,0,0,0.06);
+            }
+            .hero-stats-bar__item { text-align: center; }
+            .hero-stats-bar__value {
+                display: block;
+                font-size: 26px;
+                font-weight: 800;
+                background: linear-gradient(90deg, #4C9AFF, #9B59FF);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                line-height: 1.2;
+            }
+            .hero-stats-bar__label {
+                display: block;
+                font-size: 12px;
+                font-weight: 600;
+                color: var(--second-color);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-top: 2px;
+            }
+            .hero-stats-bar__divider {
+                width: 1px;
+                height: 34px;
+                background: rgba(0,0,0,0.1);
+            }
+            @media screen and (max-width: 768px) {
+                .hero-stats-bar { gap: 20px; padding: 16px 20px; }
+                .hero-stats-bar__divider { display: none; }
+            }
+        </style>
         <section class="home bd-grid" id="home">
             <div class="home__data">
                 <h1 class="home__title">Greetings,<br>I'm <span class="home__title-color">Faycal Kilali.</span><br>
@@ -63,11 +107,6 @@ Natural Language Processing, Computer Vision, Data Scientist, Yoshua Bengio, Gil
                 <a href="https://faycalki.github.io/portfolio-responsive-complete/faycal_kilali_resume_2pager.pdf"
                     class="button" target="_blank">Resume</a>
                 <a href="#contact" class="button">Contact</a>
-
-                <p id="hero-stats-strip" style="margin-top:18px; font-size:14px; color:var(--second-color); font-weight:600; letter-spacing:0.2px;">
-                    <span id="hero-stat-lifetime">544K+</span> users reached &nbsp;·&nbsp;
-                    <span id="hero-stat-views">1.4M+</span> downloads across independently engineered software systems &nbsp;·&nbsp; 3 large-scale production releases
-                </p>
             </div>
 
             <div class="home__social">
@@ -85,6 +124,23 @@ Natural Language Processing, Computer Vision, Data Scientist, Yoshua Bengio, Gil
                         <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png" />
                     </g>
                 </svg>
+            </div>
+
+            <div class="hero-stats-bar" id="hero-stats-strip">
+                <div class="hero-stats-bar__item">
+                    <span class="hero-stats-bar__value" id="hero-stat-lifetime">···</span>
+                    <span class="hero-stats-bar__label">Users Reached</span>
+                </div>
+                <div class="hero-stats-bar__divider"></div>
+                <div class="hero-stats-bar__item">
+                    <span class="hero-stats-bar__value" id="hero-stat-views">···</span>
+                    <span class="hero-stats-bar__label">Downloads</span>
+                </div>
+                <div class="hero-stats-bar__divider"></div>
+                <div class="hero-stats-bar__item">
+                    <span class="hero-stats-bar__value" id="hero-stat-projects">···</span>
+                    <span class="hero-stats-bar__label">Production Releases</span>
+                </div>
             </div>
         </section>
 
@@ -159,7 +215,7 @@ teaching centres, founded by Yoshua Bengio</em> &mdash; spanning deep learning, 
 learning, self-supervised &amp; meta-learning, reinforcement learning, generative models (GANs,
 GFlowNets, diffusion models), NLP &amp; LLMs, computer vision, probabilistic inference,
 optimization, graph &amp; geometric deep learning, and AI applications in science &amp; robotics.</li>
-                        
+
 <li>Admitted from a competitive applicant pool for CS, with the department awarding only about <b>~50 graduate degrees per year in Computer Science</b>.</li>
                     </ul>
                 </div>
@@ -214,7 +270,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                         <p class="work__description">2023 - 2025<br> Vice President &amp; Co-Founder of the Mature Students Club at Mount Allison University.</p>
                     </div>
                 </div>
-                
+
                                 <div class="work__item">
                     <img src="assets/img/work4.jpg" alt="" class="work__img">
                     <div class="work__overlay">
@@ -345,35 +401,35 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
         </section>
 
         <!--===== AWARDS & ACCOMPLISHMENTS =====-->
-        <section class="awards section" id="awards">
-            <h2 class="section-title">Awards &amp; Accomplishments</h2>
+<section class="awards section" id="awards">
+    <h2 class="section-title">Awards &amp; Accomplishments</h2>
 
-            <div class="awards__container bd-grid">
+    <div class="awards__container bd-grid">
 
-                <div class="awards__item">
-                    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
-                    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
-                    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
-                </div>
-                
-                <div class="awards__item">
-                    <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
-                    <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
-                    <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
-                </div>
+        <div class="awards__item">
+    <h3 class="awards__title">🏅 UdeM Exemption Scholarship — $11,004 CAD/year</h3>
+    <p class="awards__institution">Université de Montréal &nbsp; <span class="awards__date">2026 – 2028</span></p>
+    <p class="awards__description">Awarded full exemption scholarship upon evaluation following admission to the M.Sc. Computer Science program, offsetting tuition surcharges for the full duration of the degree.</p>
+</div>
 
-                <div class="awards__item">
-                    <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
-                    <p class="awards__institution">Mount Allison University</p>
-                    <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
-                </div>
+        <div class="awards__item">
+            <h3 class="awards__title">🏆 TD Ignite Grant Recipient — $4,000</h3>
+            <p class="awards__institution">Mount Allison University &nbsp; <span class="awards__date">2024</span></p>
+            <p class="awards__description">Awarded competitive grant for developing an AI-based educational tool featuring real-time object detection and multilingual support across 243 languages.</p>
+        </div>
 
-                <div class="awards__item">
-                    <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
-                    <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
-                </div>
-            </div>
-        </section>
+        <div class="awards__item">
+            <h3 class="awards__title">🥉 3rd Place — The Pitch Competition ($1,000)</h3>
+            <p class="awards__institution">Mount Allison University</p>
+            <p class="awards__description">Secured recognition for presenting a scalable solution bridging AI and healthcare, showcasing hardware-software integration and algorithm design for medical assistance devices.</p>
+        </div>
+
+        <div class="awards__item">
+            <h3 class="awards__title">🏆 Top 100 Global Ranking — League of Legends (EUW), Season 3</h3>
+            <p class="awards__description">Ranked top 100 among 70M+ active players globally (top ~0.000014%), demonstrating exceptional strategic decision-making and performance under high-stakes competitive pressure.</p>
+        </div>
+    </div>
+</section>
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
@@ -623,7 +679,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             <h2 class="section-title">Projects</h2>
             <div class="projects-container">
 
-                <!-- Content-Aware Enterprise Document Search -->
+                <!-- Content-Aware Enterprise Document Search (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Content-Aware Enterprise Document Search">
@@ -637,7 +693,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Room Scanner & Voice Guidance -->
+                <!-- Room Scanner & Voice Guidance (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Room Scanner & Voice Guidance System">
@@ -651,7 +707,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Wordle AI Agent -->
+                <!-- Wordle AI Agent (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Multi-Paradigm Wordle Puzzle Solver AI Agent">
@@ -665,7 +721,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Multivariate Regression -->
+                <!-- Multivariate Regression (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Multivariate Regression Framework">
@@ -679,7 +735,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Variable Elimination -->
+                <!-- Variable Elimination (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Variable Elimination for Bayesian Networks">
@@ -693,7 +749,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Dreamy Pastures -->
+                <!-- Dreamy Pastures (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="Dreamy Pastures Board Game Engine">
@@ -707,7 +763,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- RSA Encryption -->
+                <!-- RSA Encryption (NEW) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/placeholder.jpg" alt="RSA Encryption & Decryption System">
@@ -721,7 +777,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Medieval Conquests -->
+                <!-- Medieval Conquests (existing) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/mc.png" alt="Medieval Conquests">
@@ -738,7 +794,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Floris Evolved -->
+                <!-- Floris Evolved (existing) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/project2.jpg" alt="Floris Evolved">
@@ -754,7 +810,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- Tainted Paths -->
+                <!-- Tainted Paths (existing) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/tp.jpg" alt="Tainted Paths">
@@ -771,7 +827,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
                     </div>
                 </div>
 
-                <!-- EAHI -->
+                <!-- EAHI (existing) -->
                 <div class="project-item">
                     <div class="project-image">
                         <img src="assets/img/EAHI.png" alt="EAHI">
@@ -788,7 +844,7 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
             </div>
         </section>
 
-        <!--===== CONTACT =====-->
+<!--===== CONTACT =====-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <p class="contact__text">To get in touch, please email me at <a href="mailto:root@faycalkilali.com">root@faycalkilali.com</a>.</p>
@@ -810,8 +866,8 @@ optimization, graph &amp; geometric deep learning, and AI applications in scienc
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/steam-stats.js"></script>
+        <script src="assets/js/steam-stats.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
