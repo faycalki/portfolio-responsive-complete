@@ -723,54 +723,52 @@ img {
   }
 }
 
+.home__title-row {
+    display: flex;
+    align-items: stretch;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.home__title-row .home__title {
+    margin-bottom: 0;
+    flex: 1 1 auto;
+    min-width: 260px;
+}
 
 .hero-stats-bar {
-    position: relative;
-    z-index: 5;
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+    flex-shrink: 0;
+    padding: 0 8px;
+}
+
+.hero-stat-col {
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    max-width: 420px;
-    margin: 1.5rem 0 2rem 0;
-    padding: 20px 24px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(76,154,255,0.06), rgba(155,89,255,0.06), rgba(46,204,113,0.06));
-    border: 1px solid rgba(0,0,0,0.06);
+    align-items: center;
+    justify-content: flex-end;
+    width: 48px;
 }
 
-.hero-stat-row__top {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 4px;
-}
-
-.hero-stats-bar__label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--second-color);
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
-}
-
-.hero-stats-bar__value {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--first-color);
-}
-
-.hero-stat-track {
+.hero-stat-track-v {
+    position: relative;
+    width: 14px;
+    flex: 1 1 auto;
     background: rgba(0,0,0,0.07);
-    border-radius: 6px;
-    height: 8px;
+    border-radius: 7px;
     overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    min-height: 180px;
 }
 
-.hero-stat-fill {
-    height: 100%;
-    width: 0%;
-    border-radius: 6px;
-    transition: width 1.4s ease;
+.hero-stat-fill-v {
+    width: 100%;
+    height: 0%;
+    border-radius: 7px;
+    transition: height 1.4s ease;
 }
 
 .hero-stat-fill--views { background: #2ECC71; }
@@ -778,8 +776,36 @@ img {
 .hero-stat-fill--subs { background: #4C9AFF; }
 .hero-stat-fill--projects { background: #FF9F40; }
 
+.hero-stats-bar__value {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--second-color);
+    margin-top: 8px;
+    line-height: 1.1;
+}
+
+.hero-stats-bar__label {
+    font-size: 9px;
+    font-weight: 600;
+    color: var(--first-color);
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    text-align: center;
+    margin-top: 2px;
+    line-height: 1.2;
+}
+
 @media screen and (max-width: 767px) {
+    .home__title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .hero-stats-bar {
-        max-width: 100%;
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 1.5rem;
+    }
+    .hero-stat-track-v {
+        min-height: 120px;
     }
 }
