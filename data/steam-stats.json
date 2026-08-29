@@ -1,26 +1,26 @@
 {
   "floris": {
-    "subs": 119489,
-    "lifetimeSubs": 245913,
-    "views": 651212,
+    "subs": 119486,
+    "lifetimeSubs": 245917,
+    "views": 651231,
     "favs": 6466,
     "stars": 5,
-    "numRatings": 2983
+    "numRatings": 2972
   },
   "medieval": {
-    "subs": 97015,
-    "lifetimeSubs": 215374,
-    "views": 531459,
+    "subs": 97018,
+    "lifetimeSubs": 215380,
+    "views": 531469,
     "favs": 7331,
     "stars": 5,
-    "numRatings": 3191
+    "numRatings": 3181
   },
   "tainted": {
     "subs": 31382,
-    "lifetimeSubs": 85027,
-    "views": 227384,
+    "lifetimeSubs": 85029,
+    "views": 227391,
     "favs": 3379,
     "stars": 5,
-    "numRatings": 1106
+    "numRatings": 1103
   }
 }
