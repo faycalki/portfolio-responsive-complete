@@ -413,15 +413,7 @@ img {
     transition: opacity 0.3s ease;
 }
 
-/* Only use hover-to-reveal on devices that support hover */
-@media (hover: hover) {
-    .work__overlay {
-        opacity: 0;
-    }
-    .work__item:hover .work__overlay {
-        opacity: 1;
-    }
-}
+
 
 
 
